@@ -13,12 +13,6 @@ class PaintingsController < ApplicationController
     @painting = painting.find(params[:id])
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
   end
 
