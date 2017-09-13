@@ -1,7 +1,25 @@
 class PaintingsController < ApplicationController
 
   def index
-    @paintings = Painting.all
+    @painting = Painting.all
+  end
+
+  def create
+    @painting = Painting.new(painting_params)
+    @painting.save
+  end
+
+  def show
+    @painting = painting.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   private
