@@ -3,7 +3,7 @@
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
-  height: 70px;
+  height: 60px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -11,8 +11,9 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+.tom-logo {
+  font-size: 14px;
+  text-decoration: none;
 }
 
 /* User Avatar */
@@ -39,6 +40,7 @@
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  font-family: $headers-font;
 }
 .navbar-wagon-link:hover {
   color: #da552f;
@@ -57,7 +59,7 @@
   color: #999999 !important;
   font-size: 15px !important;
   line-height: 22px !important;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;

@@ -1,0 +1,24 @@
+<h1>albums</h1>
+
+<div class="container">
+  <div class="row">
+    <% @albums.each do |album| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('');">
+        <div class="card-description">
+          <h2><%= album.name %></h2>
+        </div>
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
