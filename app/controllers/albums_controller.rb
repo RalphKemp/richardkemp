@@ -8,6 +8,10 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
   end
 
+  def new
+     @album = Album.new(album_params)
+  end
+
   def create
     @album = Album.new(album_params)
     if @album.save
@@ -20,7 +24,6 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(name)
+    params.require(:album).permit(:name, :photo, :photo_cache)
   end
-
 end

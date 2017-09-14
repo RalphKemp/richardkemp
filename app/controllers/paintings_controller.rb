@@ -4,10 +4,10 @@ class PaintingsController < ApplicationController
     @painting = Painting.all
   end
 
-  def create
-    @painting = Painting.new(painting_params)
-    @painting.save
-  end
+  # def create
+  #   @painting = Painting.new(painting_params)
+  #   @painting.save
+  # end
 
   def show
     @painting = painting.find(params[:id])
@@ -19,7 +19,7 @@ class PaintingsController < ApplicationController
   private
 
   def painting_params
-    params.require(:painting).permit(:name, :description, :photo, :photo_cache)
+    params.require(:painting).permit(:name, :description)
   end
 
 end
