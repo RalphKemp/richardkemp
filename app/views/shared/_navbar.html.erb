@@ -1,10 +1,10 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-   <%= link_to "TOM SCASE", "#", class: "navbar-wagon-item navbar-wagon-link tom-logo" %>
+   <%= link_to "TOM SCASE", root_path, class: " tom-logo" %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-      <%= link_to "ALBUMS", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "ALBUMS", albums_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "ABOUT", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "BLOG", "#", class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
@@ -14,11 +14,12 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">ALBUMS</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a><%= link_to "ALBUMS", albums_path %></a></li>
+        <li><a><%= link_to "ABOUT", "#" %></a></li>
+        <li><a><%= link_to "BLOG", "#" %></a></li>
       </ul>
     </div>
   </div>
 </div>
+
 
