@@ -1,5 +1,4 @@
 class Album < ApplicationRecord
-  # has_many :paintings, dependent: :destroy
-  has_attachments :photos, maximum: 20
+  has_attachments :photos, maximum: 5
   validates :name, presence: true
 end
