@@ -10,9 +10,11 @@
       </div>
     </div>
   <% end %>
+  <% if user_signed_in? %>
   <div>
     <button> <%= link_to "create new album", new_album_path %> </button>
   </div>
+  <% end %>
   </div>
 </div>
 
