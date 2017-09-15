@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
   end
 
   def new
-     @album = Album.new(album_params)
+     @album = Album.new
   end
 
   def create
@@ -21,9 +21,16 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def destroy
+    album_to_delete = Album.find(params[:id])
+    album_to_delete.destroy
+    redirect_to albums_path
+  end
+
   private
 
   def album_params
-    params.require(:album).permit(:name)
+    params.require(:album).permit(:name, :description, photos: [])
   end
 end
+

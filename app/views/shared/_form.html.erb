@@ -1,0 +1,5 @@
+<%= simple_form_for(@album) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photos, as: :attachinary %>
+  <%= f.submit %>
+<% end %>

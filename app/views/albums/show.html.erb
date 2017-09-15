@@ -1,1 +1,10 @@
-<h1>hi!!!</h1>
+<% @album.photos.each do |photo| %>
+  <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+<% end %>
+
+<% if user_signed_in? %>
+  <button>
+    <%= link_to 'delete album', album_path(@album),
+    data: {:confirm => 'Are you sure?'}, :method => :delete %>
+  </button>
+<% end %>
