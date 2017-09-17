@@ -6,6 +6,8 @@
   margin: 0;
   text-align: center;
   color: white;
+  border-bottom-style: none;
+  border-bottom-color: none;
 }
 .alert-info {
   background: $green;
@@ -13,3 +15,5 @@
 .alert-warning {
   background: $red;
 }
+
+
