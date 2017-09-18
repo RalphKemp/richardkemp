@@ -1,5 +1,5 @@
 .card {
-  height: 175px;
+  height: 165px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -54,3 +54,44 @@
 .go-to-top-button {
   text-align: center;
 }
+
+// new album page
+
+.card-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 175px;
+  background-size: cover !important;
+  background-position: center;
+  color: black;
+  margin: 30px;
+  font-size: 18px;
+  text-align: center;
+  abbr {
+    display: none;
+  }
+}
+
+.attachinary_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submit-album {
+
+}
+
+.attachinary_container ul li {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
