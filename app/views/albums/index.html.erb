@@ -3,22 +3,22 @@
     <% @albums.each do |album| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: url('<%= cl_image_path(album.photos.last.path) %>');">
-          <div class="card-description">
-            <h2><%= album.name %></h2>
-          </div>
           <%= link_to "#", album_path(album), class: "card-link" %>
+        </div>
+        <div class="card-description">
+          <h2><%= album.name %></h2>
         </div>
       </div>
       <% end %>
   <% if user_signed_in? %>
-    <div>
+    <div class="new-button">
       <button> <%= link_to "create new album", new_album_path %> </button>
     </div>
     <% end %>
   </div>
 </div>
 
-
-
-
+<div class="go-to-top-button">
+  <button onclick="topFunction()" title="Go to top"> GO TO TOP </button>
+</div>
 
