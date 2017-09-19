@@ -1,5 +1,7 @@
-<% if user_signed_in? %>
-  <div class="card-new">
-    <%= render partial: "shared/form" %>
-  </div>
-<% end %>
+<div class="new-album-card">
+  <% if user_signed_in? %>
+    <div class="card-new">
+      <%= render partial: "shared/form" %>
+    </div>
+  <% end %>
+</div>
