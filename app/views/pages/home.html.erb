@@ -5,6 +5,14 @@
 </div>
 
 
+<div class="home-slideshow">
+  <% @albums.each do |album| %>
+  <div id="album-slide-photos">
+    <%= album.first.photos.each %>
+  </div>
+</div>
 
+
+<script> $('#album-slide-photos').cycle();</script>
 
 
