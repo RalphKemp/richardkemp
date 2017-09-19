@@ -7,12 +7,11 @@
 <div class="home-slideshow">
   <% @album.photos.each do |photo| %>
     <div class="col-xs-12 col-sm-12">
-      <div class="card" style="background-image: url('<%= cl_image_path(photo.path) %>');">
+      <div class="home-card", style="background-image: url('<%= cl_image_path(photo.path) %>');">
       </div>
     </div>
   <% end  %>
 </div>
-
 
 
 
