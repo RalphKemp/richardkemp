@@ -15,16 +15,28 @@
   pointer-events: none;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .video-foreground { height: 300%; top: -100%; }
+.home-slideshow {
+  width: 100%;
+  margin: 0 auto;
 }
-@media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 300%; left: -100%; }
+
+.home-card {
+  height: 165px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin: 10px;
 }
-@media all and (max-width: 600px) {
-.vid-info { width: 50%; padding: .5rem; }
-.vid-info h1 { margin-bottom: .2rem; }
+
+@media all and (max-width: 800px) {
+  .video-foreground,
+  .video-background,
+.video-background iframe {
+  display: none;
 }
-@media all and (max-width: 500px) {
-.vid-info .acronym { display: none; }
 }
+
+
+

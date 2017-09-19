@@ -1,9 +1,17 @@
 <div class="video-background">
-    <div class="video-foreground">
-      <iframe src="https://www.youtube.com/embed/5gedx8krglY?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=5gedx8krglY" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <div class="video-foreground">
+    <iframe src="https://www.youtube.com/embed/5gedx8krglY?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=5gedx8krglY" frameborder="0" allowfullscreen></iframe>
   </div>
+</div>
 
+<div class="home-slideshow">
+  <% @album.photos.first(3).each do |photo| %>
+    <div class="col-xs-12 col-sm-12">
+      <div class="home-card" style="background-image: url('<%= cl_image_path(photo.path) %>');">
+      </div>
+    </div>
+  <% end  %>
+</div>
 
 
 
