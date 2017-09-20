@@ -8,6 +8,17 @@
   margin: 10px;
 }
 
+.cardnew {
+  width: 100%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  // color: white;
+  position: relative;
+  z-index: -1;
+  height: 175px;
+}
+
 .card-category {
   position: absolute;
   top: 10px;
@@ -100,6 +111,31 @@
 
 .attachinary_container ul li {
   list-style: none;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: -webkit-flex;
+  display: flex;
+  // -webkit-box-pack: center;
+  // -ms-flex-pack: center;
+  // -webkit-justify-content: center;
+  justify-content: center;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  // -webkit-align-items: center;
+  align-items: center;
+  z-index: -1;
 }
 
 // album show
