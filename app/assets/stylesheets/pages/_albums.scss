@@ -43,7 +43,7 @@
   margin-bottom: 15px;
   cursor: pointer;
   button {
-    margin-top: 75px;
+    margin-top: 45px;
   }
   button a {
     text-decoration: none;
@@ -51,7 +51,7 @@
   }
 }
 
-.go-to-top-button {
+#go-to-top-button {
   text-align: center;
 }
 
@@ -88,11 +88,7 @@
   list-style: none;
 }
 
-
 // album show
-
-
-
 
 @media (min-width: 600px) {
   .new-album-card {

@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 18px;
 }
 
 /* Basic navbar item */
@@ -42,10 +43,10 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+  color: black;
   font-family: $headers-font;
 }
+
 .navbar-wagon-link:hover {
   color: #da552f;
   text-decoration: none;

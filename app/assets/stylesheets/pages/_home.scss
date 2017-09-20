@@ -30,7 +30,7 @@
   margin: 10px;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
   .video-foreground,
   .video-background,
 .video-background iframe {
@@ -38,5 +38,9 @@
 }
 }
 
-
+@media all and (min-width: 700px) {
+  .home-slideshow {
+    display: none;
+  }
+}
 
