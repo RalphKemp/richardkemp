@@ -6,7 +6,8 @@
           <%= link_to "#", album_path(album), class: "card-link" %>
         </div>
         <div class="card-description">
-          <h2><%= album.name %></h2>
+            <h2><%= album.name %></h2>
+            <%= link_to "#", album_path(album), class: "card-link-text"  %>
         </div>
       </div>
       <% end %>
