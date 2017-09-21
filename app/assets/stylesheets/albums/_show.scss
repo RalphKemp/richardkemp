@@ -1,0 +1,17 @@
+.card-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 175px;
+  background-size: cover !important;
+  background-position: center;
+  color: black;
+  margin: 30px;
+  font-size: 18px;
+  text-align: center;
+  abbr {
+    display: none;
+  }
+}
+
+
