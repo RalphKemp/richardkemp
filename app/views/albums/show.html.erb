@@ -29,9 +29,19 @@
 <% end %>
 
 
-
-
-
+<% content_for(:after_js) do %>
+    <%= javascript_tag do %>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+  <% end %>
+<% end %>
 
 
 
