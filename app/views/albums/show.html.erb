@@ -15,10 +15,14 @@
           </div>
         <% end %>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev swiper-button-white"></div>
-      <div class="swiper-button-next swiper-button-white"></div>
-  </div>
+    </div>
+        <% if (@album.photos != []) || (@album.photos.count == 1) %>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-all-cards"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      <% end %>
 </div>
 
 <% if user_signed_in? %>

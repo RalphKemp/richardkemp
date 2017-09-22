@@ -130,7 +130,7 @@
             // Pagination
             pagination: null,
             paginationElement: 'span',
-            paginationClickable: false,
+            paginationClickable: true,
             paginationHide: false,
             paginationBulletRender: null,
             paginationProgressRender: null,
@@ -147,7 +147,7 @@
             watchSlidesProgress: false,
             watchSlidesVisibility: false,
             // Cursor
-            grabCursor: false,
+            grabCursor: true,
             // Clicks
             preventClicks: true,
             preventClicksPropagation: true,
@@ -161,7 +161,7 @@
             preloadImages: true,
             updateOnImagesReady: true,
             // loop
-            loop: false,
+            loop: true,
             loopAdditionalSlides: 0,
             loopedSlides: null,
             // Control
@@ -5351,4 +5351,4 @@ else if (typeof define === 'function' && define.amd) {
     });
 }
 
-//# sourceMappingURL=maps/swiper.js.map
+
