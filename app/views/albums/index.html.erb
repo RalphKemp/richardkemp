@@ -6,7 +6,8 @@
           <%= link_to "#", album_path(album), class: "card-link" %>
         </div>
         <div class="card-description">
-          <h2><%= album.name %></h2>
+            <h2><%= album.name %></h2>
+            <%= link_to "#", album_path(album), class: "card-link-text"  %>
         </div>
       </div>
       <% end %>
@@ -18,7 +19,23 @@
   </div>
 </div>
 
-<div class="go-to-top-button">
+<div id="go-to-top-button" class="hidden-xs hidden-sm hidden-md hidden-lg">
   <button onclick="topFunction()" title="Go to top"> GO TO TOP </button>
 </div>
 
+
+
+<% content_for(:after_js) do %>
+<!-- Initialize Swiper -->
+  <%= javascript_tag do %>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+  <% end %>
+<% end %>

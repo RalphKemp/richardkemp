@@ -8,6 +8,17 @@
   margin: 10px;
 }
 
+.cardnew {
+  width: 100%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  // color: white;
+  position: relative;
+  z-index: -1;
+  height: 175px;
+}
+
 .card-category {
   position: absolute;
   top: 10px;
@@ -33,8 +44,22 @@
   background: black;
   opacity: 0;
 }
+.card-link-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
 .card-link:hover {
   opacity: 0.1;
+}
+.card-link-text:hover {
+  opacity: 0;
 }
 
 .new-button {
@@ -43,7 +68,7 @@
   margin-bottom: 15px;
   cursor: pointer;
   button {
-    margin-top: 75px;
+    margin-top: 45px;
   }
   button a {
     text-decoration: none;
@@ -51,27 +76,13 @@
   }
 }
 
-.go-to-top-button {
+#go-to-top-button {
   text-align: center;
 }
 
 // new album page
 
-.card-new {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 175px;
-  background-size: cover !important;
-  background-position: center;
-  color: black;
-  margin: 30px;
-  font-size: 18px;
-  text-align: center;
-  abbr {
-    display: none;
-  }
-}
+
 
 .attachinary_container {
   position: absolute;
@@ -88,11 +99,7 @@
   list-style: none;
 }
 
-
 // album show
-
-
-
 
 @media (min-width: 600px) {
   .new-album-card {

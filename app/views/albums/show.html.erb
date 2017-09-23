@@ -1,6 +1,29 @@
-<% @album.photos.each do |photo| %>
-  <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-<% end %>
+<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+  <div class="card-info">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <% unless @album.photos.empty? %>
+          <% @album.photos.each do |images_instance| %>
+          <div class="swiper-slide">
+            <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
+          </div>
+          <% end %>
+        <% else %>
+          <div class="swiper-slide">
+            <div class="cardnew" style="background-image: url('<%= cl_image_path "ux27udjcmjuu3mdcmwsh" %>')">
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+        <% if (@album.photos != []) || (@album.photos.count == 1) %>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-all-cards"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      <% end %>
+</div>
 
 <% if user_signed_in? %>
   <button>
@@ -8,3 +31,23 @@
     data: {:confirm => 'Are you sure?'}, :method => :delete %>
   </button>
 <% end %>
+
+
+<% content_for(:after_js) do %>
+    <%= javascript_tag do %>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+  <% end %>
+<% end %>
+
+
+
+
+
