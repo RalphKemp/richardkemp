@@ -1,7 +1,13 @@
-<div class="new-album-card">
-  <% if user_signed_in? %>
-    <div class="card-new">
+<div class="center-container">
+  <div class="new-album-container col-sm-4">
+    <h2 class="login-in-title">New Album</h2>
+    <% if user_signed_in? %>
       <%= render partial: "shared/form" %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+
+
+
+
+
