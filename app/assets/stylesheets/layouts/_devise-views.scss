@@ -1,0 +1,23 @@
+// login
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-in-title, .form-actions, .devise-links  {
+  text-align: center;
+}
+
+.devise-links {
+  margin-top: 10px;
+}
+
+
+// forgot password
+
+abbr {
+  display: none;
+}
+
