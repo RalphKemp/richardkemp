@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :about, :blog]
 
   def home
-    @album = Album.all.sample
+    shuffled_albums = Album.all.shuffle
+    @album = shuffled_albums.sample
   end
 
   def about
@@ -10,7 +11,6 @@ class PagesController < ApplicationController
 
   def blog
   end
-
 end
 
 
