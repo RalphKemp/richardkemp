@@ -9,14 +9,14 @@
   <div class="card-info">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-          <% @album.photos.each do |images_instance| %>
+          <% @album. do |album| %>
           <div class="swiper-slide">
             <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
           </div>
-          <% end %>
+        <% end %>
       </div>
     </div>
-    <% end  %>
+    <% end %>
   </div>
 </div>
 
