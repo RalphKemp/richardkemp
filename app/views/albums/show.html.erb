@@ -35,13 +35,14 @@
   </div>
 </div>
 
-<% if user_signed_in? %>
-  <button>
-    <%= link_to 'delete album', album_path(@album),
-    data: {:confirm => 'Are you sure?'}, :method => :delete %>
-  </button>
-<% end %>
-
+<div class="delete-button" >
+  <% if user_signed_in? %>
+    <button class="text-center">
+      <%= link_to 'delete album', album_path(@album),
+      data: {:confirm => 'Are you sure?'}, :method => :delete %>
+    </button>
+  <% end %>
+</div>
 
 <% content_for(:after_js) do %>
     <%= javascript_tag do %>
