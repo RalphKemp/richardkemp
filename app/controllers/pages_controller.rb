@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :about, :blog]
 
   def home
-    @album = Album.all.sample
+    @albums = Album.all
   end
 
   def about
@@ -10,7 +10,6 @@ class PagesController < ApplicationController
 
   def blog
   end
-
 end
 
 

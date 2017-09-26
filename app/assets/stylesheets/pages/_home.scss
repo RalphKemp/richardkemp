@@ -15,9 +15,8 @@
   pointer-events: none;
 }
 
-.home-slideshow {
-  width: 100%;
-  margin: 0 auto;
+.swiper-slide {
+  margin-bottom:12px;
 }
 
 .home-card {
@@ -39,7 +38,7 @@
 }
 
 @media all and (min-width: 700px) {
-  .home-slideshow {
+  .card-info {
     display: none;
   }
 }

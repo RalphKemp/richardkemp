@@ -4,14 +4,47 @@
   </div>
 </div>
 
-<div class="home-slideshow">
-  <% @album.photos.first(3).each do |photo| %>
-    <div class="col-xs-12 col-sm-12">
-      <div class="home-card" style="background-image: url('<%= cl_image_path(photo.path) %>');">
+<div class="col-xs-12">
+<% 3.times do %>
+  <div class="card-info">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <% @albums.each do |album| %>
+          <% album.photos.each do |images_instance|%>
+            <div class="swiper-slide">
+              <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
-  <% end  %>
+    <% end %>
+  </div>
 </div>
+
+  <% content_for(:after_js) do %>
+<!-- Initialize Swiper -->
+  <%= javascript_tag do %>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        autoplay: 5000,
+        autoplayDisableOnInteraction: false
+    });
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
 
 
 
