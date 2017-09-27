@@ -9,7 +9,7 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
           <% @albums.each do |album| %>
-          <% unless @albums == 0 %>
+          <% unless @albums.count == 0 %>
           <% album.photos.each do |images_instance|%>
             <div class="swiper-slide">
               <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
