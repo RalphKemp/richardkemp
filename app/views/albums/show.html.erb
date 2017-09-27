@@ -18,8 +18,10 @@
     <!-- <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div> -->
   <% end %>
-    <div class="show-album-description">
-      <%= @album.description %>
+    <div class="album-desc-container">
+      <div class="show-album-description">
+        <%= @album.description.gsub(/\n/, '<br />') %>
+      </div>
     </div>
 </div>
 
