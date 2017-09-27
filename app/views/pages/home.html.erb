@@ -5,20 +5,24 @@
 </div>
 
 <div class="col-xs-12">
-<% 3.times do %>
   <div class="card-info">
     <div class="swiper-container">
       <div class="swiper-wrapper">
           <% @albums.each do |album| %>
+          <% unless @albums.count == 0 %>
           <% album.photos.each do |images_instance|%>
             <div class="swiper-slide">
               <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
             </div>
           <% end %>
+          <% else %>
+            <div class="swiper-slide">
+              <div class="cardnew" style="background-image: url("../images/tom.jpg")"></div>
+            </div>
         <% end %>
+        <% end  %>
       </div>
     </div>
-    <% end %>
   </div>
 </div>
 
@@ -30,10 +34,12 @@
         slidesPerView: 1,
         paginationClickable: true,
         spaceBetween: 30,
+        calculateHeight:true,
         keyboardControl: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         autoplay: 5000,
+        speed: 1000,
         autoplayDisableOnInteraction: false
     });
   <% end %>
