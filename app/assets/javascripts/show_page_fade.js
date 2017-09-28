@@ -1,5 +1,5 @@
 $(document).ready(function () {
   $('div.profile-gallery-img').each(function(i) {
-    $(this).delay(215 * i).fadeIn(2000);
+    $(this).delay(200 * i).fadeIn(1000);
   });
 });
