@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <% @albums.each do |album| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card hide" style="background-image: url('<%= cl_image_path album.photos.first.path %>');">
+      <div class="col-xs-12 col-sm-4 hide">
+        <div class="card" style="background-image: url('<%= cl_image_path album.photos.first.path %>');">
           <%= link_to "#", album_path(album), class: "card-link" %>
         </div>
-        <div class="card-description hide">
+        <div class="card-description">
             <h2><%= album.name %></h2>
             <%= link_to "#", album_path(album), class: "card-link-text"  %>
         </div>
