@@ -6,6 +6,11 @@
   text-align: center;
 }
 
-.block:hover {
-  background-color: #dce5f4;
+.block {
+  margin-bottom: 20px;
 }
+
+.block:hover {
+  transform: scale(1.1);
+}
+
