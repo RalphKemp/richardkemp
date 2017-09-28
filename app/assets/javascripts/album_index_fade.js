@@ -1,3 +1,5 @@
 $(document).ready(function () {
-  $('div.hide').fadeIn(1700).removeClass('hide');
+  $('div.card-overall').each(function(i) {
+    $(this).delay(180 * i).fadeIn(1800);
+  });
 });
