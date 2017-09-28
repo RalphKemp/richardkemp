@@ -1,0 +1,8 @@
+<div class="center-container">
+  <div class="new-album-container col-sm-4">
+    <h2 class="login-in-title">Edit Album</h2>
+    <% if user_signed_in? %>
+      <%= render partial: "shared/form" %>
+    <% end %>
+  </div>
+</div>

@@ -21,6 +21,16 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def edit
+    @album = Album.find(params[:id])
+  end
+
+  def update
+    album_to_update = Album.find(params[:id])
+    album_to_update.update(album_params)
+    redirect_to album_path(album_to_update)
+  end
+
   def destroy
     album_to_delete = Album.find(params[:id])
     album_to_delete.destroy

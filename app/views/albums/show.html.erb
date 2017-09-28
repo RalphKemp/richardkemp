@@ -54,6 +54,14 @@
   <% end %>
 </div>
 
+<div class="edit-button" >
+  <% if user_signed_in? %>
+    <button class="text-center">
+      <%= link_to 'edit album', edit_album_path(@album) %>
+    </button>
+  <% end %>
+</div>
+
 <% content_for(:after_js) do %>
     <%= javascript_tag do %>
     var swiper = new Swiper('.swiper-container', {
