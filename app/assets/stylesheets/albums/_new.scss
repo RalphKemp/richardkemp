@@ -6,6 +6,11 @@
 }
 
 .submit-album {
+  text-align: center;
+  font-size: 18px;
+  border-style: dashed;
+  border-color: green;
+  margin: 20px;
 }
 
 .attachinary_container ul {
@@ -23,7 +28,5 @@
 }
 
 .attachinary-photos-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  text-align: center;
 }
