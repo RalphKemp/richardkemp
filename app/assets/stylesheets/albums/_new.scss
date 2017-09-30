@@ -1,6 +1,10 @@
 .attachinary_container {
   text-align: center;
   margin-top: 55px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .attachinary_container ul {
@@ -9,6 +13,12 @@
 
 .attachinary_container ul li {
   margin-top: 10px;
+  list-style: none;
+}
+
+.attachinary_container img {
+  width: 25px;
+  height: 25px;
 }
 
 .attachinary-photos-list {
