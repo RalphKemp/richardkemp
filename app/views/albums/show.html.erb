@@ -7,6 +7,7 @@
         <% @album.photos.each do |images_instance| %>
         <div class="swiper-slide">
           <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
+          <div class="show-photo-name"><%= images_instance.public_id %></div>
         </div>
         <% end %>
       </div>
