@@ -5,7 +5,7 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <% @album.photos.each do |images_instance| %>
-        <div class="swiper-slide">
+        <div class="swiper-slide individual-slide">
           <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
           <div class="show-photo-name"><%= images_instance.public_id %></div>
         </div>
@@ -14,7 +14,9 @@
     </div>
     <% if (@album.photos != []) || (@album.photos.count == 1) %>
     <!-- Add Pagination -->
-    <div class="swiper-pagination swiper-all-cards"></div>
+    <div class="all-pagination">
+      <div class="swiper-pagination swiper-all-cards"></div>
+    </div>
     <!-- Add Arrows -->
     <!-- <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div> -->
