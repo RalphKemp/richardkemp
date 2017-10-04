@@ -17,9 +17,15 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_path(@post)
+      respond_to do |format|
+        format.html { redirect_to posts_path }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'posts/index' }
+        format.js  # <-- idem
+      end
     end
   end
 
