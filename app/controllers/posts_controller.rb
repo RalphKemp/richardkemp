@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_path(post)
+      redirect_to post_path(@post)
     else
       render :new
     end
@@ -43,5 +43,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content, :category_id, photos: [])
+  end
+
+  def find_post
+    @post = Post.find(params[:id])
   end
 end

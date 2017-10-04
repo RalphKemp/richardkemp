@@ -3,3 +3,8 @@
   <p><%= post.content %></p>
 <% end %>
 
+<% if user_signed_in? %>
+  <div class="new-button">
+    <button> <%= link_to "create new post", new_post_path %> </button>
+  </div>
+<% end %>
