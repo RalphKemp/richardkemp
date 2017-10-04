@@ -6,7 +6,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
       <%= link_to "ALBUMS", albums_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "ABOUT", about_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "BLOG", "https://tomscase.wordpress.com/", target: '_blank', class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "BLOG", posts_path, class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -16,7 +16,7 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><%= link_to "ALBUMS", albums_path %></li>
         <li><%= link_to "ABOUT", about_path %></li>
-        <li><%= link_to "BLOG", "https://tomscase.wordpress.com/", target: '_blank' %></li>
+        <li><%= link_to "BLOG", posts_path %></li>
       </ul>
     </div>
   </div>
