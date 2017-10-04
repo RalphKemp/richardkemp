@@ -1,10 +1,25 @@
-<% @posts.each do |post| %>
-  <h1><%= link_to "post.title", post_path(post) %></h1>
-  <p><%= post.content %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @posts.each do |post| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="blog-post">
+        <h1><%= post.title %></h1>
+        <p><%= post.content %></p>
+        <p><%= post.category_id %></p>
+        <%= post.photos %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
 
 <% if user_signed_in? %>
-  <div class="new-button">
-    <button> <%= link_to "create new post", new_post_path %> </button>
-  </div>
+   <%= simple_form_for(@post) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name,prompt: true ) %>
+    <%= f.attachinary_file_field :photos, as: :attachinary, cloudinary: {use_filename: true, unique_filename: false}%>
+    <%= f.submit class: "submit-post"%>
+  <% end %>
 <% end %>
