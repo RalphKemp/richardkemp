@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def new
@@ -16,15 +15,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
-      respond_to do |format|
+    respond_to do |format|
+      if @post.save
         format.html { redirect_to posts_path }
         format.js  # <-- will render `app/views/reviews/create.js.erb`
-      end
-    else
-      respond_to do |format|
-        format.html { render 'posts/index' }
-        format.js  # <-- idem
+      else
+        respond_to do |format|
+          format.html { render 'posts' }
+          format.js  # <-- idem
+        end
       end
     end
   end

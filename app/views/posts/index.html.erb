@@ -1,21 +1,23 @@
 <div class="container">
-  <div class="row">
+  <div class="row" id="new-posts">
     <% @posts.each do |post| %>
-    <div class="col-xs-12 col-sm-4" id="new-posts">
+    <div class="col-xs-12 col-sm-4">
       <div class="blog-post">
         <h1><%= post.title %></h1>
         <p><%= post.content %></p>
         <p><%= post.category_id %></p>
-        <%= post.photos %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
 
-
 <% if user_signed_in? %>
   <div class="new-button">
     <%= link_to "new blog post", new_post_path, id: "new_post_link", remote: true %>
   </div>
 <% end %>
+
+
+
+
