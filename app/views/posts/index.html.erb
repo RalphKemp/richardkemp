@@ -1,16 +1,11 @@
 <div class="container">
-  <div class="row" id="new-posts">
+  <div class="row" id="new_posts">
     <% @posts.each do |post| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="blog-post">
-        <h1><%= post.title %></h1>
-        <p><%= post.content %></p>
-        <p><%= post.category_id %></p>
-      </div>
-    </div>
+      <%= render post %>
     <% end %>
   </div>
 </div>
+
 
 <% if user_signed_in? %>
   <div class="new-button">
