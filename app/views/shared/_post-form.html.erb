@@ -1,0 +1,9 @@
+<div id="new_blog_post" class="center-container" >
+  <%= simple_form_for @post, remote: true do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name,prompt: true ) %>
+    <%= f.attachinary_file_field :photos, as: :attachinary, cloudinary: {use_filename: true, unique_filename: false}%>
+    <%= f.submit class: "submit-post"%>
+  <% end %>
+</div>
