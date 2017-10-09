@@ -1,19 +1,17 @@
 <div class="col-xs-12 col-sm-6 col-lg-4">
   <div class="blog-post">
-    <div class="blog-post-text-area">
-      <div class="blog-post-title">
-        <h1><%= post.title %></h1>
-      </div>
-      <div class="blog-post-content">
-        <p><%= post.content %></p>
-      </div>
-      <div class="blog-post-category-name">
-        <p><%= post.category.name %></p>
-      </div>
+    <div class="blog-post-title">
+      <h1><%= post.title %></h1>
     </div>
+    <div class="blog-post-content">
+      <p><%= post.content %></p>
+    </div>
+    <div class="blog-post-category-name">
+      <p><%= post.category.name %></p>
+    </div>
+    <%= link_to "", post_path(post), class: "blog-post-link" %>
   </div>
 </div>
-
 
 
 
