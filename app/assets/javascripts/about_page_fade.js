@@ -5,8 +5,3 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-  $("div.card-overall").each(function(i) {
-    $(this).delay(200 * i).fadeIn(1300);
-  });
-});
