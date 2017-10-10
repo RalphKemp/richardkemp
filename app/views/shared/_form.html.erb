@@ -2,9 +2,20 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-    <div class="attachinary-photos-list">
-      <%= f.submit class: "submit-album"%>
-      <%= f.attachinary_file_field :photos, as: :attachinary, cloudinary: {use_filename: true, unique_filename: false}%>
-    </div>
+    <%= f.attachinary_file_field :photos, as: :attachinary do |f| %>
+      <%= f.attachinary_file_field :photos.photo_name %>
+    <% end %>
+    <%= f.submit class: "submit-album"%>
   </div>
 <% end %>
+
+
+
+
+
+
+
+<!--
+  <div class="attachinary-photos-list">
+  </div>
+ -->
