@@ -4,7 +4,6 @@ class CreateAttachinaryTables < ActiveRecord::Migration[5.0]
     create_table :attachinary_files do |t|
       t.references :attachinariable, polymorphic: true, index: false
       t.string :scope
-
       t.string :public_id
       t.string :version
       t.integer :width
