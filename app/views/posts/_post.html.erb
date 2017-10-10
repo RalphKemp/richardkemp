@@ -1,12 +1,18 @@
 <div class="col-xs-12 col-sm-6 col-lg-4">
   <div class="blog-post">
     <div class="blog-card-pic-header-and-date">
-      <p><%= post.created_at.strftime("%d %b. %Y") %></p>
-    </div>
-    <div class="blog-card-text-section">
+
+      <div class="blog-post-date">
+        <p><%= post.created_at.strftime("%d %b. %Y") %></p>
+      </div>
       <div class="blog-post-title">
         <h1><%= post.title %></h1>
       </div>
+
+    </div>
+
+    <div class="blog-card-text-section">
+
       <div class="blog-post-content">
         <p><%= post.content %></p>
       </div>
@@ -15,6 +21,7 @@
       </div>
       <%= link_to "", post_path(post), class: "blog-post-link" %>
     </div>
+
   </div>
 </div>
 

@@ -13,7 +13,7 @@
 <div>
   <% if user_signed_in? %>
     <div class="new-blog-post-button">
-      <button><%= link_to "NEW BLOG POST", new_post_path, id: "new_post_link", remote: true %></button>
+      <%= link_to "NEW BLOG POST", new_post_path, id: "new_post_link", remote: true %>
     </div>
   <% end %>
 </div>
