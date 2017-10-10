@@ -6,13 +6,17 @@
   </div>
 </div>
 
+<div id="go-to-top-button" class="hidden-xs hidden-sm hidden-md hidden-lg">
+  <button onclick="topFunction()" title="Go to top"> GO TO TOP </button>
+</div>
 
-<% if user_signed_in? %>
-  <div class="new-button">
-    <%= link_to "new blog post", new_post_path, id: "new_post_link", remote: true %>
-  </div>
-<% end %>
-
+<div>
+  <% if user_signed_in? %>
+    <div class="new-blog-post-button">
+      <%= link_to "NEW BLOG POST", new_post_path, id: "new_post_link", remote: true %>
+    </div>
+  <% end %>
+</div>
 
 
 

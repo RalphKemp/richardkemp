@@ -1,10 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Scada');
-@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Eczar:400,600'); // escar
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600'); // work sans
+
 
 // Define fonts for body and headers
-$body-font: 'VT323', monospace;
-$headers-font: 'VT323', monospace;
+$body-font: 'Work Sans', sans-serif;
+$headers-font: 'Eczar', serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
