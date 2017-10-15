@@ -1,5 +1,6 @@
 .show-album-name {
   font-size: 23px;
+  font-family: $headers-font;
   text-align: center;
   margin: 5px;
 }
@@ -50,4 +51,8 @@
   height: 400px;
 }
 
+.testing {
+  font-size: 28px;
+  color: black;
+}
 

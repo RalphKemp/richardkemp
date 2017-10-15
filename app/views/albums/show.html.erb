@@ -7,7 +7,7 @@
         <% @album.photos.each do |images_instance| %>
         <div class="swiper-slide individual-slide">
           <div class="cardnew" style="background-image: url('<%= cl_image_path images_instance.path %>')"></div>
-          <div class="show-photo-name"><%= images_instance.public_id %></div>
+          <div class="show-photo-name"><%= images_instance.photo_name %></div>
         </div>
         <% end %>
       </div>
@@ -35,7 +35,7 @@
   </div>
   <div class="profile-gallery">
     <% @album.photos.each_with_index do |photo, n| %>
-      <a href="<%= cl_image_path photo.path %>" data-lightbox="image-profile" data-title="My caption">
+      <a href="<%= cl_image_path photo.path %>" data-lightbox="image-profile" data-title=" <p><%=photo.photo_name%></p>">
         <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path photo.path %>);">
         </div>
       </a>
