@@ -2,10 +2,17 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
+
     <div class="attachinary-photos-list">
-      <%= f.submit class: "submit-album"%>
-      <%= f.attachinary_file_field :photos, as: :attachinary %>
+      <%= f.fields_for :painting do |builder| %>
+      <%= builder.input :name %>
+      <%= builder.input :description %>
+
+      <% end %>
     </div>
+
+    <%= f.submit class: "submit-album"%>
+
   </div>
 <% end %>
 

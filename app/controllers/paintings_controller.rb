@@ -16,7 +16,7 @@ class PaintingsController < ApplicationController
   def create
     @painting = Painting.new(painting_params)
     if @painting.save
-      redirect_to paintings_path
+      redirect_to albums_path
     else
       render :new
     end
