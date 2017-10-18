@@ -10,11 +10,15 @@ class AlbumsController < ApplicationController
 
   def new
      @album = Album.new
+     @album_paintings = @album.album_paintings.build
   end
 
   def create
     @album = Album.new(album_params)
     if @album.save
+      params[:album_paintings]['photo'].each do |p|
+        @album.album_paintings.create!(photo: p)
+      end
       redirect_to album_path(@album)
     else
       render :new
@@ -40,7 +44,6 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:name, :description, painting_attributes: [:name, :description, :photo])
+    params.require(:album).permit(:name, :description, album_paintings: [:name, :description, :album_id, :photo])
   end
 end
-

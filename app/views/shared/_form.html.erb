@@ -1,15 +1,14 @@
-<%= simple_form_for(@album) do |f| %>
+<%= simple_form_for @album, html: { multipart: true } do |f| %>
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
 
-    <div class="attachinary-photos-list">
-      <%= f.fields_for :painting do |builder| %>
-      <%= builder.input :name %>
-      <%= builder.input :description %>
+      <%= f.fields_for :paintings do |p| %>
+      <%= p.input :photo, as: :attachinary %>
+      <%= p.input :name %>
+      <%= p.input :description %>
 
       <% end %>
-    </div>
 
     <%= f.submit class: "submit-album"%>
 
