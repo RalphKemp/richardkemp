@@ -1,5 +1,5 @@
 class Painting < ApplicationRecord
   belongs_to :album
-  has_attachment :photo
+  mount_uploader :photo, PhotoUploader
   validates :name, presence: true
 end
