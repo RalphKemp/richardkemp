@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
     <% @albums.each do |album| %>
-      <%= render 'album' %>
+      <%= render album %>
     <% end %>
   </div>
 </div>
+
+
+
+
+
 
 <% if user_signed_in? %>
   <div class="new-button">

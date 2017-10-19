@@ -1,15 +1,18 @@
 class PaintingsController < ApplicationController
+
   def new
-    @painting = Painting.new
+    @painting = Painting.new(painting_params)
   end
 
   def create
+    @album = Album.find(params[:id])
     @painting = Painting.new(painting_params)
+    @painting.album = @album
     if @painting.save
       flash[:notice] = "Successfully created painting."
-      redirect_to @painting.gallery
+      redirect_to album_path(@album)
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 

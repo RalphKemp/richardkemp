@@ -2,16 +2,7 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-
-      <%= f.fields_for :paintings do |p| %>
-
-      <%= p.input :name %>
-      <%= p.input :description %>
-
-      <% end %>
-
     <%= f.submit class: "submit-album"%>
-
   </div>
 <% end %>
 
