@@ -1,9 +1,71 @@
-
-<div>
-  <% @album.paintings.each do |p| %>
-    <%= image_tag p.photo %>
+<div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+  <div class="show-album-name">
+     <%= @album.name %>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <% @album.paintings.each do |painting| %>
+        <div class="swiper-slide individual-slide">
+          <div class="cardnew" style="background-image: url('<%= cl_image_path painting.photo %>')"></div>
+          <div class="show-photo-name"><%= painting.name %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% if (@album.paintings != []) || (@album.paintings.count == 1) %>
+  <!-- Add Pagination -->
+    <div class="all-pagination">
+      <div class="swiper-pagination swiper-all-cards"></div>
+    </div>
+  <!-- Add Arrows -->
+  <!-- <div class="swiper-button-next swiper-button-white"></div>
+  <div class="swiper-button-prev swiper-button-white"></div> -->
   <% end %>
+  <div class="album-desc-container">
+    <div class="show-album-description">
+      <%= @album.description.gsub(/\n/, '<br />') %>
+    </div>
+  </div>
 </div>
+
+<div class="hidden-sm hidden-xs">
+  <!-- TODO lightbox2 gallery -->
+  <div class="show-album-name">
+    <%= @album.name %>
+  </div>
+  <div class="profile-gallery">
+    <% @album.paintings.each_with_index do |painting, n| %>
+      <a href="<%= cl_image_path painting.photo %>" data-lightbox="image-profile" data-title=" <p><%= painting.name %></p>">
+        <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path painting.photo %>);">
+        </div>
+      </a>
+    <% end %>
+  </div>
+  <div class="album-desc-container">
+    <div class="show-album-description">
+      <%= @album.description %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="delete-button" >
   <% if user_signed_in? %>
