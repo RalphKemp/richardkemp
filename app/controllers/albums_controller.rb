@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
   end
 
   def new
-     @album = Album.new
+    @album = Album.new
   end
 
   def create
@@ -40,7 +40,6 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:name, :description, photos: [])
+    params.require(:album).permit(:name, :description)
   end
 end
-

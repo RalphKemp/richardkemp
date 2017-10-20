@@ -1,0 +1,13 @@
+<div class="center">
+  <% @paintings.each do |painting| %>
+     <div class="card" style="background-image: url('<%= cl_image_path painting.photo.path %>');">
+     </div>
+  <% end %>
+</div>
+
+<button> <%= link_to "create new painting", new_painting_path %> </button>
+
+
+
+
+
