@@ -1,14 +1,39 @@
 .show-album-name {
-  font-size: 23px;
+  font-size: 28px;
+  font-weight: bold;
   font-family: $headers-font;
   text-align: center;
-  margin: 5px;
+  margin: 20px;
 }
 
 .show-photo-name {
   font-size: 23px;
   text-align: center;
   margin: 5px;
+}
+
+.profile-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+.profile-gallery-img {
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+   -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.profile-gallery-img:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .delete-button {
@@ -24,13 +49,15 @@
 .album-desc-container {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
 }
 
 .show-album-description {
   max-width: 300px;
   background-color: #f4f4f4;
   padding: 5px;
+  font-size: 18px;
+  margin-top: 55px;
+  padding: 20px;
 }
 
 .all-pagination {
