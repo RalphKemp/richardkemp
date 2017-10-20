@@ -1,8 +1,10 @@
-<%= simple_form_for [ @album, @painting ] do |f|  %>
-  <%= f.label :name %> <br>
-  <%= f.text_field :name %>
-  <%= f.input :description %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
+<div id="new_painting_post">
+  <%= simple_form_for [ @album, @painting ], remote: true do |f|  %>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name %>
+    <%= f.input :description %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit %>
+  <% end %>
+</div>

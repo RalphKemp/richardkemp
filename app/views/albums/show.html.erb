@@ -33,7 +33,7 @@
   <div class="show-album-name">
     <%= @album.name %>
   </div>
-  <div class="profile-gallery">
+  <div class="profile-gallery" id="new_painting_posts">
     <% @album.paintings.each_with_index do |painting, n| %>
       <a href="<%= cl_image_path painting.photo %>" data-lightbox="image-profile" data-title=" <p><%= painting.name %></p>">
         <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path painting.photo %>);">
@@ -47,24 +47,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="delete-button" >
@@ -84,11 +66,11 @@
   <% end %>
 </div>
 
-<div class="edit-button" >
+<div class="new-photo-button" >
   <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'add photo', new_album_painting_path(@album, @painting) %>
-    </button>
+
+      <%= link_to 'add photo', new_album_painting_path(@album, @painting), id: "new_painting_link", remote: true %>
+
   <% end %>
 </div>
 

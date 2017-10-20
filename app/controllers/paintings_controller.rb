@@ -1,6 +1,10 @@
 class PaintingsController < ApplicationController
   before_action :set_album
 
+  def index
+    @paintings = @album.paintings.all
+  end
+
   def new
     @painting = @album.paintings.new
   end
@@ -12,11 +16,16 @@ class PaintingsController < ApplicationController
   def create
     @painting = @album.paintings.new(painting_params)
     @painting.album = @album
-    if @painting.save
-      flash[:notice] = "Successfully added painting."
-      redirect_to @album
-    else
-      render :new
+    respond_to do |format|
+      if @painting.save
+        format.html { redirect_to album_paintings_path }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      else
+        respond_to do |format|
+          format.html { render 'new' }
+          format.js  # <-- idem
+        end
+      end
     end
   end
 
