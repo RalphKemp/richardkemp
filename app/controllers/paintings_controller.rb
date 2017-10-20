@@ -13,7 +13,7 @@ class PaintingsController < ApplicationController
     @painting = @album.paintings.new(painting_params)
     @painting.album = @album
     if @painting.save
-      flash[:notice] = "Successfully created painting."
+      flash[:notice] = "Successfully added painting."
       redirect_to @album
     else
       render :new
