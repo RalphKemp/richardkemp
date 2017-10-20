@@ -1,0 +1,20 @@
+.footer {
+  background: #f2e9e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-size: 14px;
+  color: black;
+}
+
+.footer p {
+  font-family: $headers-font;
+  font-weight: bold;
+  margin: 0px !important;
+}
