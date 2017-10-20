@@ -56,14 +56,8 @@
   background-color: #f4f4f4;
   padding: 5px;
   font-size: 18px;
-  margin-top: 55px;
+  margin-top: 35px;
   padding: 20px;
-}
-
-.all-pagination {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .cardnew {
@@ -99,11 +93,12 @@
 .lightbox-painting-description {
   font-size: 14px;
   color: black;
+  margin-bottom: 40px;
 }
 
-
-
-
+.swiper-pagination-bullet-active {
+  background-color: red;
+}
 
 
 

@@ -7,16 +7,24 @@
       <% @album.paintings.each do |painting| %>
         <div class="swiper-slide individual-slide">
           <div class="cardnew" style="background-image: url('<%= cl_image_path painting.photo %>')"></div>
-          <div class="show-photo-name"><%= painting.name %></div>
+          <div class="lighbox-photo-info">
+          <div class="lightbox-painting-name">
+            <%= painting.name %>
+          </div>
+          <div class="lightbox-painting-description">
+            <%= painting.description %>
+          </div>
+        </div>
         </div>
       <% end %>
     </div>
+    <div class="swiper-pagination swiper-all-cards"></div>
   </div>
   <% if (@album.paintings != []) || (@album.paintings.count == 1) %>
   <!-- Add Pagination -->
-    <div class="all-pagination">
-      <div class="swiper-pagination swiper-all-cards"></div>
-    </div>
+
+
+
   <!-- Add Arrows -->
   <!-- <div class="swiper-button-next swiper-button-white"></div>
   <div class="swiper-button-prev swiper-button-white"></div> -->
