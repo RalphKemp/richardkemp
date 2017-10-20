@@ -39,6 +39,14 @@
         <%= painting.description%></p>">
         <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path painting.photo %>);">
         </div>
+        <div class="lighbox-photo-info">
+          <div class="lightbox-painting-name">
+            <%= painting.name %>
+          </div>
+          <div class="lightbox-painting-description">
+            <%= painting.description %>
+          </div>
+        </div>
       </a>
     <% end %>
   </div>
