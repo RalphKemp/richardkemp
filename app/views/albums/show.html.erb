@@ -1,5 +1,6 @@
 
 
+
 <div class="delete-button" >
   <% if user_signed_in? %>
     <button class="text-center">
@@ -20,7 +21,7 @@
 <div class="edit-button" >
   <% if user_signed_in? %>
     <button class="text-center">
-      <%= link_to 'add photo', new_painting_path(@album) %>
+      <%= link_to 'add photo', new_album_painting_path(@album, @painting) %>
     </button>
   <% end %>
 </div>
