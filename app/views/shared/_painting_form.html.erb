@@ -1,4 +1,4 @@
-<%= simple_form_for @painting do |f|  %>
+<%= simple_form_for([ album, painting ]) do |f|  %>
   <%= f.label :name %> <br>
   <%= f.text_field :name %>
   <%= f.input :description %>

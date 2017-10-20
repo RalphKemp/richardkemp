@@ -1,7 +1,11 @@
 class PaintingsController < ApplicationController
 
+  def index
+    @paintings = Painting.all
+  end
+
   def new
-    @painting = Painting.new(painting_params)
+    @painting = Painting.new
   end
 
   def create
