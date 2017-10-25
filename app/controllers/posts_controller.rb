@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    # Bootsy::ImageGallery.new
     @post = Post.new
   end
 
@@ -48,7 +49,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :category_id, photos: [])
+    params.require(:post).permit(:title, :content, :category_id, :bootsy_image_gallery_id)
   end
 
   def find_post

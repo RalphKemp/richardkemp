@@ -16,9 +16,6 @@
     <%= javascript_include_tag 'application' %>
     <%= yield(:after_js) %>
     <%= cloudinary_js_config %>
-    <% unless controller_name=="pages" && action_name=='home' %>
-      <%= render 'shared/footer'%>
-    <%end%>
   </body>
 </html>
 

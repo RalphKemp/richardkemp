@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019214523) do
+ActiveRecord::Schema.define(version: 20171023004243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(version: 20171019214523) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.text "description"
+  end
+
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.string "bootsy_resource_type"
+    t.bigint "bootsy_resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bootsy_resource_type", "bootsy_resource_id"], name: "my_index"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string "image_file"
+    t.bigint "image_gallery_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["image_gallery_id"], name: "index_bootsy_images_on_image_gallery_id"
   end
 
   create_table "categories", force: :cascade do |t|
