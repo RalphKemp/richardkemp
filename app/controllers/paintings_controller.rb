@@ -3,10 +3,13 @@ class PaintingsController < ApplicationController
 
   def new
     @painting = @album.paintings.new
+    @painting = @post.paintings.new
+
   end
 
    def show
     @painting = @album.paintings.find(params[:id])
+    @painting = @post.paintings.find(params[:id])
   end
 
   def create
