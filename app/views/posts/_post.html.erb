@@ -6,7 +6,7 @@
         <p><%= post.created_at.strftime("%d %b. %Y") %></p>
       </div>
       <div class="blog-post-title">
-        <h1><%= post.title %></h1>
+        <h1><%= post.title.html_safe %></h1>
       </div>
 
     </div>
@@ -14,7 +14,7 @@
     <div class="blog-card-text-section">
 
       <div class="blog-post-content">
-        <p><%= post.content %></p>
+        <p><%= post.content.html_safe %></p>
       </div>
       <div class="blog-post-category-name">
         <p><%= post.category.name %></p>
