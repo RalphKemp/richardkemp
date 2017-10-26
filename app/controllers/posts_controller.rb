@@ -22,10 +22,8 @@ class PostsController < ApplicationController
         format.html { redirect_to posts_path }
         format.js  # <-- will render `app/views/reviews/create.js.erb`
       else
-        respond_to do |format|
-          format.html { render 'posts' }
-          format.js  # <-- idem
-        end
+        format.html { render 'posts' }
+        format.js  # <-- idem
       end
     end
   end
