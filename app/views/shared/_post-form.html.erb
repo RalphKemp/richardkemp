@@ -1,9 +1,11 @@
-<div id="new_blog_post" class="center-container" >
-  <%= simple_form_for @post, remote: true do |f| %>
-    <%= f.input :title %>
-    <%= f.input :content %>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: true ) %>
+<div class="post-form-index">
+  <div id="new_blog_post">
+    <%= simple_form_for @post, remote: true do |f| %>
+      <%= f.input :title %>
+      <%= f.input :content, as: :bootsy %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, prompt: true ) %>
 
-    <%= f.submit class: "submit-post"%>
-  <% end %>
+      <%= f.submit class: "submit-post"%>
+    <% end %>
+  </div>
 </div>
