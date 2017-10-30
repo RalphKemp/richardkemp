@@ -66,48 +66,31 @@
 </div>
 
 
+  <div class="delete-button" >
+    <% if user_signed_in? %>
+      <button class="text-center">
+        <%= link_to 'delete album', album_path(@album),
+        data: {:confirm => 'Are you sure?'}, :method => :delete %>
+      </button>
+    <% end %>
+  </div>
 
+  <div class="edit-button" >
+    <% if user_signed_in? %>
+      <button class="text-center">
+        <%= link_to 'edit album', edit_album_path(@album) %>
+      </button>
+    <% end %>
+  </div>
 
+  <div class="add-photo-button" >
+    <% if user_signed_in? %>
+      <button class="text-center">
+        <%= link_to 'add photo', new_album_painting_path(@album, @painting) %>
+      </button>
+    <% end %>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="delete-button" >
-  <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'delete album', album_path(@album),
-      data: {:confirm => 'Are you sure?'}, :method => :delete %>
-    </button>
-  <% end %>
-</div>
-
-<div class="edit-button" >
-  <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'edit album', edit_album_path(@album) %>
-    </button>
-  <% end %>
-</div>
-
-<div class="edit-button" >
-  <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'add photo', new_album_painting_path(@album, @painting) %>
-    </button>
-  <% end %>
-</div>
 
 <% content_for(:after_js) do %>
     <%= javascript_tag do %>
