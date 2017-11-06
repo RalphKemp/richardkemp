@@ -5,7 +5,7 @@ class PaintingsController < ApplicationController
     @painting = @album.paintings.new
   end
 
-   def show
+  def show
     @painting = @album.paintings.find(params[:id])
   end
 
@@ -36,9 +36,12 @@ class PaintingsController < ApplicationController
 
   def destroy
     @painting = @album.paintings.find(params[:id])
-    @painting.destroy
-    flash[:notice] = "Successfully destroyed painting."
-    redirect_to @album
+    if @painting.delete
+      flash[:notice] = "Successfully destroyed painting."
+      redirect_to album_path(@album)
+    else
+      render :show
+    end
   end
 
   private

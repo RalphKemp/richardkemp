@@ -45,6 +45,19 @@
   text-align: center;
 }
 
+.add-photo-button {
+  text-align: center;
+}
+
+.user-edit-controls {
+  margin: 20px;
+  padding: 30px;
+  & button {
+    margin-top: 20px;
+  }
+}
+
+
 .album-desc-container {
   display: flex;
   justify-content: center;
