@@ -9,7 +9,7 @@
       <%= f.label :name %> <br>
       <%= f.text_field :name %>
       <%= f.input :description %>
-      <%= f.input :photo %>
+      <%= f.input :photo, multiple: true %>
       <%= f.input :photo_cache, as: :hidden %>
     </div>
     <div class="form-actions">
