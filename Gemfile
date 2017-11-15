@@ -21,6 +21,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'lightbox2-rails'
+gem 'rename'
 
 
 
