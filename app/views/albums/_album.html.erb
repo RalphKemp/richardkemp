@@ -1,6 +1,6 @@
 <div class="col-xs-12 col-sm-4">
   <div class="card-overall">
-    <div class="card" style="background-image: url('<%= cl_image_path album.paintings.first.photo  %>');">
+    <div class="card" style="background-image: url(<%= cl_image_path album.paintings.first.photo %> );">
       <%= link_to "#", album_path(album), class: "card-link" %>
     </div>
     <div class="card-description">
@@ -9,3 +9,7 @@
     </div>
   </div>
 </div>
+
+
+
+

@@ -43,19 +43,21 @@
   </div>
   <div class="profile-gallery">
     <% @album.paintings.each_with_index do |painting, n| %>
-      <a href="<%= cl_image_path painting.photo %>" data-lightbox="image-profile" data-title="<p><%= painting.name %>&nbsp;&nbsp;-&nbsp;&nbsp;
-        <%= painting.description%></p>">
-        <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path painting.photo %>);">
-        </div>
-        <div class="lighbox-photo-info">
-          <div class="lightbox-painting-name">
-            <%= painting.name %>
+      <div class="album-photo">
+        <a href="<%= cl_image_path painting.photo %>" data-lightbox="image-profile" data-title="<p><%= painting.name %>&nbsp;&nbsp;-&nbsp;&nbsp;
+          <%= painting.description%></p>">
+          <div class="profile-gallery-img" style="background-image: url(<%= cl_image_path painting.photo %>);">
           </div>
-          <div class="lightbox-painting-description">
-            <%= painting.description %>
+          <div class="lighbox-photo-info">
+            <div class="lightbox-painting-name">
+              <%= painting.name %>
+            </div>
+            <div class="lightbox-painting-description">
+              <%= painting.description %>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     <% end %>
   </div>
   <div class="album-desc-container">
@@ -65,49 +67,33 @@
   </div>
 </div>
 
+<div class="user-edit-controls">
+  <div class="delete-button" >
+    <% if user_signed_in? %>
+      <button class="text-center">
+        <%= link_to 'delete album', album_path(@album),
+        data: {:confirm => 'Are you sure?'}, :method => :delete %>
+      </button>
+    <% end %>
+  </div>
 
+  <div class="edit-button" >
+    <% if user_signed_in? %>
+      <button class="text-center">
+        <%= link_to 'edit album info', edit_album_path(@album) %>
+      </button>
+    <% end %>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="delete-button" >
-  <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'delete album', album_path(@album),
-      data: {:confirm => 'Are you sure?'}, :method => :delete %>
-    </button>
-  <% end %>
+  <div class="add-photo-button" >
+    <% if user_signed_in? %>
+      <button class="text-center">
+        <%= link_to 'add photo', new_album_painting_path(@album, @painting) %>
+      </button>
+    <% end %>
+  </div>
 </div>
 
-<div class="edit-button" >
-  <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'edit album', edit_album_path(@album) %>
-    </button>
-  <% end %>
-</div>
-
-<div class="edit-button" >
-  <% if user_signed_in? %>
-    <button class="text-center">
-      <%= link_to 'add photo', new_album_painting_path(@album, @painting) %>
-    </button>
-  <% end %>
-</div>
 
 <% content_for(:after_js) do %>
     <%= javascript_tag do %>

@@ -39,13 +39,24 @@
 
 .delete-button {
   text-align: center;
-  margin-top: 20px;
 }
 
 .edit-button {
   text-align: center;
-  margin-top: 5px;
 }
+
+.add-photo-button {
+  text-align: center;
+}
+
+.user-edit-controls {
+  margin: 20px;
+  padding: 30px;
+  & button {
+    margin-top: 20px;
+  }
+}
+
 
 .album-desc-container {
   display: flex;
@@ -104,7 +115,14 @@
   background-color: red;
 }
 
+.album-show-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-
+.album-show-buttons button {
+  margin: 30px 10px;
+}
 
 
